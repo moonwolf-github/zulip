@@ -1,6 +1,6 @@
 class zulip::postgresql_common {
   include zulip::snakeoil
-  $version = zulipconf('postgresql', 'version', undef)
+  $version = zulipconf('postgresql', 'version', '15')
   case $::os['family'] {
     'Debian': {
       $postgresql = "postgresql-${version}"
@@ -22,11 +22,11 @@ class zulip::postgresql_common {
       ]
     }
     'RedHat': {
-      $postgresql = "postgresql${version}"
+      $postgresql = "postgresql"
       $postgresql_packages = [
         $postgresql,
         "${postgresql}-server",
-        "${postgresql}-devel",
+        "${postgresql}-server-devel",
         'pg_top',
         'hunspell-en-US',
         # exists on CentOS 6 and Fedora 29 but not CentOS 7

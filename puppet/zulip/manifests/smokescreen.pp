@@ -47,6 +47,6 @@ class zulip::smokescreen {
     group   => 'root',
     mode    => '0644',
     content => template('zulip/supervisor/smokescreen.conf.erb'),
-    notify  => Service[supervisor],
+    notify  => Service[supervisord],
   }
 }

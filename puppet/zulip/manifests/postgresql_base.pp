@@ -21,18 +21,18 @@ class zulip::postgresql_base {
       $postgresql_dict_affix = '/var/cache/postgresql/dicts/en_us.affix'
     }
     'RedHat': {
-      $postgresql = "postgresql${zulip::postgresql_common::version}"
-      $postgresql_sharedir = "/usr/pgsql-${zulip::postgresql_common::version}/share"
+      $postgresql = "postgresql"
+      $postgresql_sharedir = "/usr/share/pgsql"
       $postgresql_confdirs = [
-        "/var/lib/pgsql/${zulip::postgresql_common::version}",
-        "/var/lib/pgsql/${zulip::postgresql_common::version}/data",
+        "/var/lib/pgsql",
+        "/var/lib/pgsql/data",
       ]
       $postgresql_confdir = $postgresql_confdirs[-1]
-      $postgresql_datadir = "/var/lib/pgsql/${zulip::postgresql_common::version}/data"
+      $postgresql_datadir = "/var/lib/pgsql/data"
       $tsearch_datadir = "${postgresql_sharedir}/tsearch_data/"
       $pgroonga_setup_sql_path = "${postgresql_sharedir}/pgroonga_setup.sql"
       $setup_system_deps = 'setup_yum_repo'
-      $postgresql_restart = "systemctl restart postgresql-${zulip::postgresql_common::version}"
+      $postgresql_restart = "systemctl restart postgresql"
       # TODO Since we can't find the PostgreSQL dicts directory on CentOS yet, we
       # link directly to the hunspell directory.
       $postgresql_dict_dict = '/usr/share/myspell/en_US.dic'

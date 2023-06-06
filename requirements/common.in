@@ -64,7 +64,7 @@ PyJWT
 pika
 
 # Needed to access our database
-psycopg2
+psycopg2-binary
 
 # Needed for memcached usage
 python-binary-memcached

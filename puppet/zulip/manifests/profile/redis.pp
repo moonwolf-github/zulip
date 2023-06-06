@@ -7,7 +7,7 @@ class zulip::profile::redis {
     }
     'RedHat': {
       $redis = 'redis'
-      $redis_dir = '/etc'
+      $redis_dir = '/etc/redis'
     }
     default: {
       fail('osfamily not supported')

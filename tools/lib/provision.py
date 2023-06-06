@@ -299,9 +299,9 @@ def install_yum_deps(deps_to_install: List[str]) -> None:
     if "rhel" in os_families():
         # This is how a pip3 is installed to /usr/bin in CentOS/RHEL
         # for python35 and later.
-        run_as_root(["python36", "-m", "ensurepip"])
+        run_as_root(["python3", "-m", "ensurepip"])
         # `python36` is not aliased to `python3` by default
-        run_as_root(["ln", "-nsf", "/usr/bin/python36", "/usr/bin/python3"])
+        #run_as_root(["ln", "-nsf", "/usr/bin/python36", "/usr/bin/python3"])
     postgresql_dir = f"pgsql-{POSTGRESQL_VERSION}"
     for cmd in ["pg_config", "pg_isready", "psql"]:
         # Our tooling expects these PostgreSQL scripts to be at

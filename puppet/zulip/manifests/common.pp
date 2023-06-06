@@ -45,6 +45,7 @@ class zulip::common {
   $goarch = $::os['architecture'] ? {
     'amd64'   => 'amd64',
     'aarch64' => 'arm64',
+    'x86_64'  => 'amd64',
   }
 
   $versions = {
@@ -55,6 +56,7 @@ class zulip::common {
       'sha256'    => {
         'amd64'   => '18e096ab1e3f31df34b81c2e5c9a4435daab9985be854d7ed2166e84a8955d2e',
         'aarch64' => '85b291bb18e0ca749c8ec26bec750967f6832b346481fb61c789026b2d2d00d9',
+        'x86_64'   => '18e096ab1e3f31df34b81c2e5c9a4435daab9985be854d7ed2166e84a8955d2e',
       },
     },
 
@@ -64,6 +66,7 @@ class zulip::common {
       'sha256'  => {
         'amd64'   => '698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd',
         'aarch64' => '105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6',
+        'x86_64'   => '698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd',
       },
     },
 

@@ -52,6 +52,6 @@ class zulip::camo (String $listen_address = '0.0.0.0') {
     group   => 'root',
     mode    => '0644',
     content => template('zulip/supervisor/go-camo.conf.erb'),
-    notify  => Service[supervisor],
+    notify  => Service[supervisord],
   }
 }

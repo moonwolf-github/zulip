@@ -84,8 +84,8 @@ saslpasswd2 -p -f /etc/sasl2/memcached-sasldb2 \
   }
   file { '/run/memcached':
     ensure  => directory,
-    owner   => 'memcache',
-    group   => 'memcache',
+    owner   => $memcached_user,
+    group   => $memcached_user,
     mode    => '0755',
     require => Package[$memcached_packages],
   }

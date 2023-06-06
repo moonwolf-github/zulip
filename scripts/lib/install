@@ -219,7 +219,7 @@ if [ -f /etc/os-release ]; then
 fi
 
 case "$os_id $os_version_id" in
-    'debian 11' | 'debian 12' | 'ubuntu 20.04' | 'ubuntu 22.04') ;;
+    'debian 11' | 'debian 12' | 'ubuntu 20.04' | 'ubuntu 22.04' | 'rocky 9.2') ;;
     *)
         set +x
         cat <<EOF

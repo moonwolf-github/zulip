@@ -8,7 +8,7 @@ class zulip::apache_sso {
       $apache2 = 'apache2'
     }
     'RedHat': {
-      $apache_packages = [ 'httpd', 'python36u-mod_wsgi', ]
+      $apache_packages = [ 'httpd', 'python3-mod_wsgi', ]
       $conf_dir = '/etc/httpd'
       $apache2 = 'httpd'
     }

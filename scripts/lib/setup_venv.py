@@ -55,7 +55,7 @@ COMMON_YUM_VENV_DEPENDENCIES = [
 
 REDHAT_VENV_DEPENDENCIES = [
     *COMMON_YUM_VENV_DEPENDENCIES,
-    "python36-devel",
+    "python3-devel",
     "python-virtualenv",
 ]
 
